@@ -8,20 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		661A8DCA1CABFEBB00139B27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A8DC91CABFEBB00139B27 /* AppDelegate.swift */; };
-		661A8DCC1CABFEBB00139B27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A8DCB1CABFEBB00139B27 /* ViewController.swift */; };
+		661A8DCC1CABFEBB00139B27 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A8DCB1CABFEBB00139B27 /* RootController.swift */; };
 		661A8DCF1CABFEBB00139B27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661A8DCD1CABFEBB00139B27 /* Main.storyboard */; };
 		661A8DD11CABFEBB00139B27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661A8DD01CABFEBB00139B27 /* Assets.xcassets */; };
 		661A8DD41CABFEBB00139B27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661A8DD21CABFEBB00139B27 /* LaunchScreen.storyboard */; };
+		661A8DE01CAE9E4D00139B27 /* SinglePlayerSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A8DDF1CAE9E4D00139B27 /* SinglePlayerSong.swift */; };
+		661A8DE21CAE9F6B00139B27 /* SongListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A8DE11CAE9F6B00139B27 /* SongListener.swift */; };
+		661A8DE41CAEA2A000139B27 /* BeepSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A8DE31CAEA2A000139B27 /* BeepSound.swift */; };
+		661A8DE61CAEA4B600139B27 /* SinglePlayerSongController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A8DE51CAEA4B600139B27 /* SinglePlayerSongController.swift */; };
+		661A8DE81CAEA76700139B27 /* random_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 661A8DE71CAEA76700139B27 /* random_sound.wav */; };
+		661A8DEA1CAF220B00139B27 /* BeatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A8DE91CAF220B00139B27 /* BeatsController.swift */; };
+		661A8DEC1CAF226B00139B27 /* BeatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A8DEB1CAF226B00139B27 /* BeatButton.swift */; };
+		661A8DEE1CAF30F000139B27 /* random_sound2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 661A8DED1CAF30F000139B27 /* random_sound2.wav */; };
+		661A8DF01CAF318400139B27 /* random_sound3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 661A8DEF1CAF318400139B27 /* random_sound3.wav */; };
+		661A8DF31CAF473C00139B27 /* SongSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A8DF11CAF473C00139B27 /* SongSound.swift */; };
+		661A8DF41CAF473C00139B27 /* Beat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A8DF21CAF473C00139B27 /* Beat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		661A8DC61CABFEBB00139B27 /* Beats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		661A8DC91CABFEBB00139B27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		661A8DCB1CABFEBB00139B27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		661A8DCB1CABFEBB00139B27 /* RootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
 		661A8DCE1CABFEBB00139B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		661A8DD01CABFEBB00139B27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		661A8DD31CABFEBB00139B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		661A8DD51CABFEBB00139B27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		661A8DDF1CAE9E4D00139B27 /* SinglePlayerSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePlayerSong.swift; sourceTree = "<group>"; };
+		661A8DE11CAE9F6B00139B27 /* SongListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListener.swift; sourceTree = "<group>"; };
+		661A8DE31CAEA2A000139B27 /* BeepSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeepSound.swift; sourceTree = "<group>"; };
+		661A8DE51CAEA4B600139B27 /* SinglePlayerSongController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePlayerSongController.swift; sourceTree = "<group>"; };
+		661A8DE71CAEA76700139B27 /* random_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = random_sound.wav; sourceTree = "<group>"; };
+		661A8DE91CAF220B00139B27 /* BeatsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatsController.swift; sourceTree = "<group>"; };
+		661A8DEB1CAF226B00139B27 /* BeatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatButton.swift; sourceTree = "<group>"; };
+		661A8DED1CAF30F000139B27 /* random_sound2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = random_sound2.wav; sourceTree = "<group>"; };
+		661A8DEF1CAF318400139B27 /* random_sound3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = random_sound3.wav; sourceTree = "<group>"; };
+		661A8DF11CAF473C00139B27 /* SongSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongSound.swift; sourceTree = "<group>"; };
+		661A8DF21CAF473C00139B27 /* Beat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +76,20 @@
 		661A8DC81CABFEBB00139B27 /* Beats */ = {
 			isa = PBXGroup;
 			children = (
+				661A8DF11CAF473C00139B27 /* SongSound.swift */,
+				661A8DF21CAF473C00139B27 /* Beat.swift */,
+				661A8DE71CAEA76700139B27 /* random_sound.wav */,
+				661A8DED1CAF30F000139B27 /* random_sound2.wav */,
+				661A8DEF1CAF318400139B27 /* random_sound3.wav */,
+				661A8DDF1CAE9E4D00139B27 /* SinglePlayerSong.swift */,
+				661A8DE11CAE9F6B00139B27 /* SongListener.swift */,
 				661A8DC91CABFEBB00139B27 /* AppDelegate.swift */,
-				661A8DCB1CABFEBB00139B27 /* ViewController.swift */,
+				661A8DCB1CABFEBB00139B27 /* RootController.swift */,
+				661A8DE91CAF220B00139B27 /* BeatsController.swift */,
+				661A8DE51CAEA4B600139B27 /* SinglePlayerSongController.swift */,
+				661A8DE31CAEA2A000139B27 /* BeepSound.swift */,
 				661A8DCD1CABFEBB00139B27 /* Main.storyboard */,
+				661A8DEB1CAF226B00139B27 /* BeatButton.swift */,
 				661A8DD01CABFEBB00139B27 /* Assets.xcassets */,
 				661A8DD21CABFEBB00139B27 /* LaunchScreen.storyboard */,
 				661A8DD51CABFEBB00139B27 /* Info.plist */,
@@ -96,6 +129,7 @@
 				TargetAttributes = {
 					661A8DC51CABFEBB00139B27 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 26LQV8YZ96;
 					};
 				};
 			};
@@ -123,8 +157,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				661A8DD41CABFEBB00139B27 /* LaunchScreen.storyboard in Resources */,
+				661A8DE81CAEA76700139B27 /* random_sound.wav in Resources */,
 				661A8DD11CABFEBB00139B27 /* Assets.xcassets in Resources */,
+				661A8DEE1CAF30F000139B27 /* random_sound2.wav in Resources */,
 				661A8DCF1CABFEBB00139B27 /* Main.storyboard in Resources */,
+				661A8DF01CAF318400139B27 /* random_sound3.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +172,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				661A8DCC1CABFEBB00139B27 /* ViewController.swift in Sources */,
+				661A8DF31CAF473C00139B27 /* SongSound.swift in Sources */,
+				661A8DE41CAEA2A000139B27 /* BeepSound.swift in Sources */,
+				661A8DEC1CAF226B00139B27 /* BeatButton.swift in Sources */,
+				661A8DF41CAF473C00139B27 /* Beat.swift in Sources */,
+				661A8DE01CAE9E4D00139B27 /* SinglePlayerSong.swift in Sources */,
+				661A8DE61CAEA4B600139B27 /* SinglePlayerSongController.swift in Sources */,
+				661A8DCC1CABFEBB00139B27 /* RootController.swift in Sources */,
+				661A8DE21CAE9F6B00139B27 /* SongListener.swift in Sources */,
 				661A8DCA1CABFEBB00139B27 /* AppDelegate.swift in Sources */,
+				661A8DEA1CAF220B00139B27 /* BeatsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +292,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Beats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cykod.Beats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -258,10 +307,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Beats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cykod.Beats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -284,6 +337,7 @@
 				661A8DDA1CABFEBB00139B27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

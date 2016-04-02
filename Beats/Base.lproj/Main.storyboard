@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lf6-Tl-wbn">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Root Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RootController" customModule="Beats" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,206 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNv-KK-Odx">
+                                <rect key="frame" x="256" y="285" width="89" height="30"/>
+                                <state key="normal" title="Single Player"/>
+                                <connections>
+                                    <segue destination="MA5-Kg-C15" kind="show" id="SJ7-V7-OI4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UNv-KK-Odx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="75w-IP-9Dr"/>
+                            <constraint firstItem="UNv-KK-Odx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PGj-e7-8cR"/>
+                            <constraint firstItem="UNv-KK-Odx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VPj-9V-lWM"/>
+                            <constraint firstItem="UNv-KK-Odx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lt5-lF-4X3"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="OWX-FM-DV9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Boop Beep-->
+        <scene sceneID="Mn4-bm-q0f">
+            <objects>
+                <tableViewController id="MA5-Kg-C15" customClass="SinglePlayerSongController" customModule="Beats" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="np6-FV-aIs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SoundCell" id="cZm-qv-iyx">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cZm-qv-iyx" id="j0C-zp-Kny">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="iym-eU-QlS" kind="show" identifier="beatSegue" id="QVa-5t-ybN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MA5-Kg-C15" id="X59-t0-Npn"/>
+                            <outlet property="delegate" destination="MA5-Kg-C15" id="Bn8-rO-Le0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Boop Beep" id="d5z-PL-P4H"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9m-9p-T9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997" y="279"/>
+        </scene>
+        <!--Beats Controller-->
+        <scene sceneID="TN6-s4-qwF">
+            <objects>
+                <viewController id="iym-eU-QlS" customClass="BeatsController" customModule="Beats" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CMk-RI-emZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="pRS-yQ-vfx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wsy-lh-P4s">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lfB-gX-nEx">
+                                <rect key="frame" x="169" y="271" width="230" height="230"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PA1-nJ-OEP">
+                                        <rect key="frame" x="0.0" y="0.0" width="230" height="50"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3q-zF-odI" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vcT-2n-PTh" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="60" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B07-z2-eV8" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="120" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="50z-p4-haH" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="180" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TgC-1n-lAr">
+                                        <rect key="frame" x="0.0" y="60" width="230" height="50"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B1E-sF-qsm" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fav-zd-bPR" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="60" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ywc-sR-5lU" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="120" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mIx-Zy-DgU" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="180" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c2I-dk-VLr">
+                                        <rect key="frame" x="0.0" y="120" width="230" height="50"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SsL-Bk-tc3" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OuH-8e-AHt" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="60" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qZl-Cu-cbf" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="120" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wK-Mn-kqH" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="180" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dKu-iR-qUj">
+                                        <rect key="frame" x="0.0" y="180" width="230" height="50"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bP-u0-4Tn" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F7U-03-u8g" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="60" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qSb-yw-J1P" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="120" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HLS-NN-xcZ" customClass="BeatButton" customModule="Beats" customModuleProvider="target">
+                                                <rect key="frame" x="180" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lfB-gX-nEx" firstAttribute="top" secondItem="CMk-RI-emZ" secondAttribute="bottom" constant="100" id="B0k-6r-hXy"/>
+                            <constraint firstItem="lfB-gX-nEx" firstAttribute="centerX" secondItem="Wsy-lh-P4s" secondAttribute="centerX" id="WBP-ki-X8Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="beatButtons" destination="A3q-zF-odI" collectionClass="NSMutableArray" id="qqh-vw-EEz"/>
+                        <outletCollection property="beatButtons" destination="vcT-2n-PTh" collectionClass="NSMutableArray" id="LUA-Zo-wgm"/>
+                        <outletCollection property="beatButtons" destination="B07-z2-eV8" collectionClass="NSMutableArray" id="GC2-Qe-pwA"/>
+                        <outletCollection property="beatButtons" destination="50z-p4-haH" collectionClass="NSMutableArray" id="I76-mj-zVL"/>
+                        <outletCollection property="beatButtons" destination="B1E-sF-qsm" collectionClass="NSMutableArray" id="Stt-w3-J8z"/>
+                        <outletCollection property="beatButtons" destination="fav-zd-bPR" collectionClass="NSMutableArray" id="QIx-E1-hvL"/>
+                        <outletCollection property="beatButtons" destination="Ywc-sR-5lU" collectionClass="NSMutableArray" id="0NW-pn-VcR"/>
+                        <outletCollection property="beatButtons" destination="mIx-Zy-DgU" collectionClass="NSMutableArray" id="NAS-GU-niT"/>
+                        <outletCollection property="beatButtons" destination="SsL-Bk-tc3" collectionClass="NSMutableArray" id="2eL-cD-cUM"/>
+                        <outletCollection property="beatButtons" destination="OuH-8e-AHt" collectionClass="NSMutableArray" id="pdl-4X-h5l"/>
+                        <outletCollection property="beatButtons" destination="qZl-Cu-cbf" collectionClass="NSMutableArray" id="y0p-zT-JIx"/>
+                        <outletCollection property="beatButtons" destination="2wK-Mn-kqH" collectionClass="NSMutableArray" id="C7R-e1-7Is"/>
+                        <outletCollection property="beatButtons" destination="8bP-u0-4Tn" collectionClass="NSMutableArray" id="bXN-CI-8OC"/>
+                        <outletCollection property="beatButtons" destination="F7U-03-u8g" collectionClass="NSMutableArray" id="sdz-nb-JPf"/>
+                        <outletCollection property="beatButtons" destination="qSb-yw-J1P" collectionClass="NSMutableArray" id="bGB-pb-W1V"/>
+                        <outletCollection property="beatButtons" destination="HLS-NN-xcZ" collectionClass="NSMutableArray" id="NlU-XO-hA1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ny-ZY-w37" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1730" y="297"/>
+        </scene>
+        <!--BoopBeep-->
+        <scene sceneID="nKS-lO-Ly4">
+            <objects>
+                <navigationController title="BoopBeep" id="lf6-Tl-wbn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EbU-uX-Zyt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IsT-TI-XBH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5yU-kM-1oX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-494" y="321"/>
         </scene>
     </scenes>
 </document>
